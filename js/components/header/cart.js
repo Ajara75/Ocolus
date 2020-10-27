@@ -16,4 +16,3 @@ for (let i = 0; i < cartPrice.length; i++) {
 }
 
 export default Cart;
-
