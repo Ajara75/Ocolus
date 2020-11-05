@@ -68,7 +68,7 @@ const Decor = () => {
       col4Cloned.append(decorItem);
       decorRow.append(col4Cloned);
     }
-    
+
     for (let i = 0; i < 4; i++) {
       const scandinavianTitle = document.createElement('h3');
       const scandinavianBtn = document.createElement('a');
@@ -93,3 +93,4 @@ const Decor = () => {
 };
 
 export default Decor;
+

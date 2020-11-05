@@ -48,3 +48,6 @@ decorContentDescription.innerHTML =
   'We help people find the perfect product at the right price. Our extensive selection and superior customer service coupled with the convenience of online shopping, make it easier than ever before to find exactly what you want for your home at a price you can afford.';
 decorContentBtn.innerHTML = 'READ MORE OUR STORY &rarr;';
 decorContentBtn.href = '#';
+
+
+
