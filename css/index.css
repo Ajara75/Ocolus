@@ -585,7 +585,31 @@ li {
 }
 
 .decor hr {
-  border-color: #dddddd;
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
+}
+.decor__recommended--title {
+  font-size: 40px;
+  color: #293341;
+  margin-top: 97px;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  text-align: center;
+}
+.decor__recommended--title::before {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  width: 150px;
+  height: 2px;
+  background: #7b7b7b;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 3165px;
+}
+.decor__recommmended--slider {
+  display: flex;
+  padding-top: 136px;
 }
 /*# sourceMappingURL=index.css.map */
 
