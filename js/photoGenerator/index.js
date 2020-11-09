@@ -1,22 +1,18 @@
-import { colorGray } from '../header/const.js';
+import { colorGray } from "../header/const.js";
 
 export const imgWrapper = document.createElement('div');
 imgWrapper.style.padding = '0 40px';
 imgWrapper.style.boxSizing = 'border-box';
-imgWrapper.style.margin = '100px 0';
+imgWrapper.style.margin = '100px 0 0 0';
 
-export const imageGenerator = (parent, times, width) => {
-  for (let i = 0; i < times; i++) {
-    let randomizer = Math.floor(Math.random() * 100);
-    var img = document.createElement('img');
-    img.src = `https://source.unsplash.com/collection/${randomizer}/450x450`;
-    img.style.width = width;
-    img.style.padding = '3px';
-    img.style.boxSizing = 'border-box';
-    parent.appendChild(img);
-  }
-  return '';
-};
+for (let i = 0; i < 12; i++) {
+  var img = document.createElement('img');
+  img.src = `https://source.unsplash.com/collection/${i}/300x300`;
+  img.style.width = '25%';
+  img.style.padding = '3px';
+  img.style.boxSizing = 'border-box';
+  imgWrapper.appendChild(img);
+}
 
 export const time = document.createElement('ul');
 time.style.fontSize = '16px';
@@ -39,14 +35,14 @@ time.appendChild(hoursHTML);
 time.appendChild(minutesHTML);
 time.appendChild(secondsHTML);
 
-const newYears = '06 Nov 2020';
+const newYears = '22 Oct 2020';
 
-const countDown = () => {
+function countDown() {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();
 
-  const seconds = Math.floor((newYearsDate - currentDate) / 1000);
-  const totalSeconds = Math.floor(seconds % 60);
+	const seconds = Math.floor((newYearsDate - currentDate) / 1000);
+	const totalSeconds = Math.floor(seconds % 60);
   const days = Math.floor(seconds / 3600 / 24);
   const hours = Math.floor(seconds / 3600) % 24;
   const minutes = Math.floor(seconds / 60) % 60;
@@ -54,6 +50,12 @@ const countDown = () => {
   hoursHTML.innerHTML = `${hours < 10 ? `0${hours}:` : hours}`;
   minutesHTML.innerHTML = `${minutes < 10 ? `0${minutes}:` : minutes}:`;
   secondsHTML.innerHTML = `${totalSeconds < 10 ? `0${totalSeconds}` : totalSeconds}`;
-};
+}
 countDown();
 setInterval(countDown, 1000);
+
+
+
+
+
+
